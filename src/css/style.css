@@ -1,0 +1,94 @@
+html{
+    font-size: 62.5%;
+}
+
+
+body{
+    font-family: "Roboto";
+    display: grid;
+    grid: 
+    "header header header header"
+    "hero hero hero hero"
+    "about about about about"
+    "services services services services"
+    "projects projects projects projects"
+    "footer footer footer footer";
+    grid-template-columns: repeat(4, 1ft);
+}
+
+
+/* HEADER */
+.header{
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+}
+
+.header h1{
+    font-size: 3rem;
+    transition: 0.3s;
+}
+
+.header h1:hover{
+    color: coral;
+}
+
+
+/* HERO */
+.hero{
+    grid-area: hero;
+    height: 87vh;
+    background-color: aqua;
+    background: url('../images/lemons.jpg')no-repeat center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.hero h2{
+    font-size: 4rem;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.hero:after{
+    content: url('../images/seta_preta.png');
+    position: absolute;
+    bottom: 40px;
+    animation: movimento 0.6s infinite alternate ease-in-out;
+}
+
+@-webkit-keyframes movimento {
+    0%{-webkit-transform: translateY(0); opacity: 0.4;}
+    100%{-webkit-transform: translateY(0.6em); opacity: 0.9;}
+}
+
+@media(max-width: 475px){
+    .hero{
+        height: 60vh;
+    }
+
+    .hero h2{
+        font-size: 2rem;
+    }
+}
+
+.about{
+    grid-area: about;
+}
+
+.services{
+    grid-area: services;
+}
+
+.projects{
+    grid-area: projects;
+}
+
+.footer{
+    grid-area: footer;
+}
