@@ -236,18 +236,22 @@ body{
     display: flex;
     justify-content: center;
     gap: 35px;
-    font-size: 1.6rem;
     font-weight: 500;
 }
 
-.footer ul a{
+.footer ul li{
     transition: 0.3s;
     font-size: 2rem;
 }
 
-.footer ul a:hover{
-    color: #fff;
-    font-weight: 700;
-    transform: scale(3);
+.footer ul li:hover{
+    transform: scale(1.2);
 }
 
+.footer ul a{
+    transition: 0.3s;
+}
+
+.footer ul a:hover{
+    color: #fff;
+}
