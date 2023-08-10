@@ -28,6 +28,10 @@
     flex-direction: column;
 }
 
+.header input{
+    display: none;
+}
+
 .header .hamburger{
     background-color:#000;
     position: relative;
@@ -58,9 +62,6 @@
     bottom: -10px;
 }
 
-.header input{
-    display: none;
-}
 
 .header input:checked ~ label .hamburger{
     transform: rotate(45deg);
